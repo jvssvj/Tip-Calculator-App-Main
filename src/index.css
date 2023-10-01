@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root {
+    --StrongCyan: hsl(172, 67%, 45%);
+    --VeryDarkCyan: hsl(183, 100%, 15%);
+    --DarkGrayishCyan: hsl(186, 14%, 43%);
+    --GrayishCyan: hsl(184, 14%, 56%);
+    --LightGrayishCyan: hsl(185, 41%, 84%);
+    --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --BtnInactive :hsl(183, 79%, 24%);
+    --ColorError: hsl(7, 65%, 61%);
+    --HoverBtn:hsl(173, 61%, 77%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--LightGrayishCyan);
+    font-size: 1rem;
+}
+
+.logo{
+    padding: 1em;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 3em;
+    background-color: var(--White);
+    padding: 2em;
+    margin-top: 4em;
+    width: 100%;
+    max-width:920px;
+    border-radius: 0.8rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+input {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--White);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    height: 48px;
+}
+
+::placeholder {
+    text-align: right;
+    color: var(--GrayishCyan);
+}
+
+.div-bill {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#billinput {
+    background-image: url('../images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 1rem;
+}
+
+.select-tip{
+    margin-top: 2.5em;
+}
+
+#custominput {
+    transition: none;
+    background-color: var(--VeryLightGrayishCyan);
+    color: var(--VeryDarkCyan);
+    text-align: center;
+}
+
+#custominput::placeholder {
+    text-align: center;
+}
+
+.percentages {
+    display: grid;
+    grid-template-columns: 117px 117px 117px;
+    grid-template-rows: 48px 48px;
+    gap: 0.88rem;
+    margin-top: 0.7rem;
+    width: 100%;
+}
+
+.percentages input {
+    background-color: var(--VeryDarkCyan);
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.percentages input:hover{
+    background-color: var(--StrongCyan);
+}
+
+.numberpeople {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5em;
+}
+
+#numberpeopleinput {
+    background-image: url('../images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 1rem;
+}
+
+#numberpeopleinput, #billinput {
+    margin-top: 0.2rem;
+}
+
+.div-bill input:focus, 
+.numberpeople input:focus, 
+#custominput:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+    outline: none;
+}
+
+#billinput, #numberpeopleinput {
+    background-color: var(--VeryLightGrayishCyan);
+    color: var(--VeryDarkCyan);
+    text-align: right;
+    padding-right: 0.9rem;
+}
+
+#billinput::placeholder, 
+#numberpeopleinput::placeholder {
+    text-align: right;
+}
+
+label, .select-tip span {
+    color: var(--GrayishCyan);
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--VeryDarkCyan);
+    width: 100%;
+    max-width: 431px;
+    padding: 3em;
+    border-radius: 0.8rem;
+}
+
+.tip-amount, .tip-amount-result, .total, .total-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tip-amount-text, .total-text {
+    line-height: 1.4rem;
+}
+
+.tip-amount-text p, .total-text p  {
+    color: var(--White);
+}/*Tip Amount*/
+
+.tip-amount-text span , .total-text span {
+    font-size: 0.82rem;
+    color: var(--DarkGrayishCyan);
+} /*/ person*/
+
+.dolar-icon {
+    font-size: 3rem;
+    color: var(--StrongCyan);
+}
+
+#amount-result, #total-result {
+    font-size: 2.4rem;
+    color: var(--StrongCyan);
+} 
+
+#reset {
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: var(--BtnInactive);
+    color: var(--VeryDarkCyan);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8.2em;
+}
+
+#reset:hover {
+    background-color: var(--HoverBtn);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="button"]:active {
+    transform: scale(0.92);
+}
+
+.error {
+    display: none;
+    color: var(--ColorError);
+}
+
+.bill-label, .numberpeople-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.attribution {
+    position: absolute;
+    margin-top: 80em;
+    padding: 1em;
+    color: var(--VeryDarkCyan);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--StrongCyan);
+}
