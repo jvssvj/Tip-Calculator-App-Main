@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/indexMobile.css">
+  <script src="src/index.js" defer></script>
+  
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+<body>
+
+  <img class="splitter__logo" src="images/logo.svg" alt="">
+
+  <main class="splitter__card">
+
+
+    <div class="splitter__card__divider">
+
+      <div class="splitter__card__divider__bill">
+        <div class="splitter__card__divider__bill__label__error">
+          <label class="label" for="bill--input">Bill</label>
+          <span class="error" id="error--bill"></span>
+        </div>
+        <input type="number" name="bill--input" id="bill--input" placeholder="0">
+      </div>
+
+      <div class="splitter__card__divider__tips">
+        <span class="splitter__card__divider__tips__t">Select Tip %</span>
+        <div class="splitter__card__divider__tips__percentages">
+          <input class="btn__percentage" id="five--percentage" type="button" value="5%">
+          <input class="btn__percentage" id="ten--percentage" type="button" value="10%">
+          <input class="btn__percentage" id="fifteen--percentage" type="button" value="15%">
+          <input class="btn__percentage" id="twenty-five--percentage" type="button" value="25%">
+          <input class="btn__percentage" id="fifty--percentage" type="button" value="50%">
+          <input class="btn__percentage" id="custom--percentage" type="number" name="custom" id="custom" placeholder="Custom">
+        </div>
+      </div>
+
+      <div class="splitter__card__divider__people">
+        <div class="splitter__card__divider__people__label__error">
+          <label class="label" for="people--input">Number of People</label>
+          <span class="error" id="error--people"></span>
+        </div>
+        <input type="number" name="people--input" id="people--input" placeholder="0">
+      </div>
+      
+    </div>
+
+
+
+    <div class="splitter__card__result">
+
+      <div class="splitter__card__result__amount">
+
+        <div class="splitter__card__result__amount__tip">
+          <p class="splitter__card__result__amount__tip__t">Tip Amount</p>
+          <span class="splitter__card__result__amount__tip__p" >/ person</span>
+        </div>
+        
+        <span class="splitter__card__result__amount__tip__result" id="tip--result">$0.00</span>
+
+      </div>
+
+
+
+      <div class="splitter__card__result__total">
+
+        <div class="splitter__card__result__total__person">
+          <p class="splitter__card__result__total__person__t">Total</p>
+          <span class="splitter__card__result__total__person__p">/ person</span>
+        </div>
+
+
+        <span class="splitter__card__result__total__result" id="total--result">$0.00</span>
+      </div>
+
+
+
+      <input id="reset" type="button" value="reset">
+    </div >
+
+
+
+  </main>
+
+  <footer class="attribution">
+    <p >Challenge by <a href="https://www.frontendmentor.io/profile/jvssvj" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-62b518263/" target="_blank">João Vitor</a></p>
+  </footer>
+</body>
+</html>

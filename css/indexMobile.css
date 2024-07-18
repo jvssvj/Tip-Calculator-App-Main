@@ -1,0 +1,62 @@
+@media(max-width:750px) {
+    .splitter__card {
+        flex-direction: column;
+    }
+
+    .splitter__card__divider,
+    .splitter__card__result {
+        max-width: unset;
+    }
+
+    .splitter__card__result {
+        padding: 1.5rem;
+    }
+
+    .splitter__card__divider__tips__percentages {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(45px, 500px));
+        grid-template-rows: repeat(2, minmax(45px, 48px));
+    }
+
+    .splitter__card__result__total {
+        margin-top: 0;
+    }
+
+    #reset {
+        margin-top: 1.511em;
+    }
+
+    .attribution {
+        position: unset;
+        margin-top: 5em;
+    }
+}
+
+@media(max-width:500px) {
+    .splitter__card__result__amount__tip__result,
+    .splitter__card__result__total__result {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:360px) {
+    .splitter__card__result__amount,
+    .splitter__card__result__total {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .splitter__card__result__total {
+        margin-top: 2em;
+    }
+
+    .splitter__card__result__amount__tip__result,
+    .splitter__card__result__total__result {
+        font-size: 1.7rem;
+    }
+
+    .error {
+        position: absolute;
+        bottom: -5.2em;
+    }
+}
